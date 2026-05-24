@@ -1,0 +1,476 @@
+# Instincts generated from https://github.com/Kreoun/awesome-windows
+# Generated: 2026-05-24T11:41:57.352Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: awesome-windows-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Kreoun/awesome-windows
+---
+
+# Awesome Windows Commit Length
+
+## Action
+
+Keep commit messages concise (~39 characters)
+
+## Evidence
+
+- Average commit message length: 39 chars
+- Based on 100 commits
+
+---
+id: awesome-windows-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Kreoun/awesome-windows
+---
+
+# Awesome Windows Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: awesome-windows-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Kreoun/awesome-windows
+---
+
+# Awesome Windows Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: awesome-windows-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Kreoun/awesome-windows
+---
+
+# Awesome Windows Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: awesome-windows-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Kreoun/awesome-windows
+---
+
+# Awesome Windows Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: awesome-windows-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Kreoun/awesome-windows
+---
+
+# Awesome Windows Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~16x per month
+- Files: 
+
+---
+id: awesome-windows-workflow-add-new-software-entry
+trigger: "when doing add new software entry"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Kreoun/awesome-windows
+---
+
+# Awesome Windows Workflow Add New Software Entry
+
+## Action
+
+Follow the add-new-software-entry workflow:
+1. Edit README.md to add the new software entry under the relevant category
+2. Commit the change with a message indicating the addition
+3. Optionally, submit a pull request if not committing directly to main
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: README.md
+
+---
+id: awesome-windows-workflow-fix-or-update-existing-entry
+trigger: "when doing fix or update existing entry"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Kreoun/awesome-windows
+---
+
+# Awesome Windows Workflow Fix Or Update Existing Entry
+
+## Action
+
+Follow the fix-or-update-existing-entry workflow:
+1. Edit README.md to fix or update the relevant entry
+2. Commit the change with a message indicating the fix or update
+3. Optionally, submit a pull request if not committing directly to main
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: README.md
+
+---
+id: awesome-windows-workflow-merge-pull-request-for-readme-change
+trigger: "when doing merge pull request for readme change"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Kreoun/awesome-windows
+---
+
+# Awesome Windows Workflow Merge Pull Request For Readme Change
+
+## Action
+
+Follow the merge-pull-request-for-readme-change workflow:
+1. Review the pull request for correctness and formatting
+2. Merge the pull request into the main branch
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~6x per month
+- Files: README.md
+
+---
+id: awesome-windows-workflow-update-contributors-list
+trigger: "when doing update contributors list"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Kreoun/awesome-windows
+---
+
+# Awesome Windows Workflow Update Contributors List
+
+## Action
+
+Follow the update-contributors-list workflow:
+1. Edit README.md to update the contributors section
+2. Commit the change with a message indicating the update
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: README.md
+
+---
+id: awesome-windows-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct File Naming
+
+## Action
+
+Use PascalCase for file names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: awesome-windows-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: awesome-windows-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: awesome-windows-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: awesome-windows-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: awesome-windows-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: awesome-windows-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Test Location
+
+## Action
+
+Place tests in a separate directory from source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: awesome-windows-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Commit Prefix
+
+## Action
+
+Start the commit message with a prefix such as 'feat:', 'fix:', or 'docs:'
+
+## Evidence
+
+- Seen in commit: 'fix: remove 2 browsers that dont exist on windows'
+- Seen in commit: 'docs: remove archived project from my project secion'
+- Seen in commit: 'feat: add 'Note-taking' section and migrate apps'
+
+---
+id: awesome-windows-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Commit Length
+
+## Action
+
+Keep commit messages concise, around 39 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: awesome-windows-instinct-add-software-entry
+trigger: "When someone wants to add a new application, tool, or software to the awesome-windows list"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Add Software Entry
+
+## Action
+
+Edit README.md to add the new software entry under the relevant category, commit the change with a message indicating the addition, and optionally submit a pull request
+
+## Evidence
+
+- Workflow: add-new-software-entry
+- Seen in commit: 'Add Ente Photos and Ente Auth'
+
+---
+id: awesome-windows-instinct-fix-or-update-entry
+trigger: "When someone wants to correct, clarify, or update an existing entry in the list"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Fix Or Update Entry
+
+## Action
+
+Edit README.md to fix or update the relevant entry, commit the change with a message indicating the fix or update, and optionally submit a pull request
+
+## Evidence
+
+- Workflow: fix-or-update-existing-entry
+- Seen in commit: 'fix: [oss] link formatting in Ente Photos entry'
+
+---
+id: awesome-windows-instinct-merge-readme-pr
+trigger: "When a contributor submits a pull request to update the README.md file"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Merge Readme Pr
+
+## Action
+
+Review the pull request for correctness and formatting, then merge the pull request into the main branch
+
+## Evidence
+
+- Workflow: merge-pull-request-for-readme-change
+- Seen in commit: 'Merge pull request #80 from helouism/main'
+
+---
+id: awesome-windows-instinct-update-contributors
+trigger: "When someone wants to acknowledge new contributors"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: Kreoun/awesome-windows
+---
+
+# Awesome Windows Instinct Update Contributors
+
+## Action
+
+Edit README.md to update the contributors section and commit the change with a message indicating the update
+
+## Evidence
+
+- Workflow: update-contributors-list
+
