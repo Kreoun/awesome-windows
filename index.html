@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHOMRAEUN-CHIN's Awesome Windows Apps</title>
+  <meta name="description" content="A curated list of apps for Windows, by CHOMRAEUN-CHIN.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --max-width: 860px;
+      --border: #d0d7de;
+      --link: #0969da;
+    }
+    .byline {
+      text-align: center;
+      margin: 0 0 2rem;
+      font-size: 1.1rem;
+    }
+    .rainbow-name {
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      color: #7b2cbf;
+    }
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+      .rainbow-name {
+        background: linear-gradient(90deg, #ff5f6d, #ffc371, #4ecdc4, #556fff, #a855f7, #ff5f6d);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: rainbow-shift 6s linear infinite;
+      }
+    }
+    @keyframes rainbow-shift {
+      to { background-position: 200% center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .rainbow-name { animation: none; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 2rem 1.25rem 4rem;
+      font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: inherit;
+    }
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    main img { max-width: 100%; }
+    h1, h2, h3 {
+      line-height: 1.25;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3em;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; margin-top: 2rem; }
+    ul { padding-left: 1.4rem; }
+    li { margin: 0.35rem 0; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+    table { border-collapse: collapse; }
+    td, th { border: 1px solid var(--border); padding: 0.5rem 0.75rem; }
+    blockquote {
+      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      border-left: 4px solid var(--border);
+      color: gray;
+    }
+    #status { color: gray; font-style: italic; }
+  </style>
+</head>
+<body>
+  <main id="content">
+    <p id="status">Loading…</p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script>
+    (function () {
+      var content = document.getElementById("content");
+      var byline =
+        '<p class="byline">Curated by <span class="rainbow-name">CHOMRAEUN-CHIN</span></p>';
+
+      function insertByline() {
+        var h1 = content.querySelector("h1");
+        if (h1) h1.insertAdjacentHTML("afterend", byline);
+      }
+
+      fetch("README.md")
+        .then(function (res) {
+          if (!res.ok) throw new Error("README.md not found (" + res.status + ")");
+          return res.text();
+        })
+        .then(function (markdown) {
+          content.innerHTML = marked.parse(markdown, { gfm: true });
+          insertByline();
+        })
+        .catch(function (err) {
+          content.innerHTML =
+            "<h1>Awesome Windows</h1><p>Could not load the list right now. " +
+            "See the <a href=\"https://github.com/0PandaDEV/awesome-windows\">GitHub repository</a> instead.</p>";
+          insertByline();
+          console.error(err);
+        });
+    })();
+  </script>
+</body>
+</html>
